@@ -1,0 +1,34 @@
+<html>
+<head> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>src="app.js"</script>
+</head>
+
+<script>
+
+function test(){
+	var fizzbuzzString = "";
+
+	for(var i=1;i<=100;i++){
+		if(i %3 == 0){
+			fizzbuzzString += "fizz";
+		}
+		if(i%5 == 0){
+			fizzbuzzString += " buzz";
+		}
+
+		if(fizzbuzzString){
+			$("#fizz").append(fizzbuzzString + '<br/>');
+		}
+		else{
+			$("#fizz").append(i + '<br/>');
+		}
+		fizzbuzzString = "";
+	}
+}
+</script>
+
+<body onload="test();">
+<div id="fizz"></div>
+</body>
+</html>
